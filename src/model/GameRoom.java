@@ -5,16 +5,21 @@ import java.util.ArrayList;
 
 public class GameRoom {
 	
-	private InetAddress host;
+	private String host;
 	private int max_points;
-	private int[] scores;
 	private ArrayList<String> names;
 	
-	public InetAddress getHost() {
+	public GameRoom(String host, int max_points, ArrayList<String> names) {
+		this.host = host;
+		this.max_points = max_points;
+		this.names = names;
+	}
+	
+	public String getHost() {
 		return host;
 	}
 	
-	public void setHost(InetAddress host) {
+	public void setHost(String host) {
 		this.host = host;
 	}
 	
@@ -24,14 +29,6 @@ public class GameRoom {
 	
 	public void setMax_points(int max_points) {
 		this.max_points = max_points;
-	}
-	
-	public int[] getScores() {
-		return scores;
-	}
-	
-	public void setScores(int[] scores) {
-		this.scores = scores;
 	}
 	
 	public ArrayList<String> getNames() {
