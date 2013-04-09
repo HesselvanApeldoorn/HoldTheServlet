@@ -14,7 +14,6 @@ public class RmiSendNewHostStarter extends RmiStarter {
 
 	public RmiSendNewHostStarter() {
 		super(SendNew.class);
-		new GameRooms();
 	}
 
 	@Override
