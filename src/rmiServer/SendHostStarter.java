@@ -22,7 +22,7 @@ public class SendHostStarter extends RmiStarter {
 			
 			RetrieveHost engineStub = (RetrieveHost) UnicastRemoteObject.exportObject(engine, 0);
 			LocateRegistry.createRegistry(2525);  
-			Naming.rebind("rmi://129.125.41.178:2525/"+RetrieveHost.SERVICE_NAME, engineStub); 
+			Naming.rebind("rmi://129.125.41.177:2525/"+RetrieveHost.SERVICE_NAME, engineStub); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
