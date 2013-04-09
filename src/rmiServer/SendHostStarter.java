@@ -5,6 +5,8 @@ import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 
+import model.GameRooms;
+
 import rmiBase.RetrieveHost;
 import rmiBase.RmiStarter;
 
@@ -13,6 +15,7 @@ public class SendHostStarter extends RmiStarter {
 
 	public SendHostStarter() {
 		super(RetrieveHost.class);
+		new GameRooms();
 	}
 
 	@Override

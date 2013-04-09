@@ -25,6 +25,9 @@ public class HostList implements Task<ArrayList<GameRoom>>, Serializable {
 //		list.add("naam");
 //		GameRoom room = new GameRoom("Gasdrsdfgap", 5 , list); 
 //		knownHosts.add(room);
+		if(GameRooms.rooms == null) {
+			GameRooms.rooms = new ArrayList<GameRoom>();
+		}
 		return GameRooms.rooms;
 	}
 

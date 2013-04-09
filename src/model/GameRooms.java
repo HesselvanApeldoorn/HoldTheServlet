@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class GameRooms {
 	
-	public static ArrayList<GameRoom> rooms ;
+	public static ArrayList<GameRoom> rooms;
 	
 	public GameRooms() {
 		rooms =  new ArrayList<GameRoom>();
