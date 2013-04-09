@@ -1,9 +1,12 @@
 package model;
 
-import java.net.InetAddress;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class GameRoom {
+public class GameRoom implements Serializable {
+	
+
+	private static final long serialVersionUID = 2L;
 	
 	private String host;
 	private int max_points;
@@ -16,7 +19,7 @@ public class GameRoom {
 	}
 	
 	public String getHost() {
-		return host;
+		return this.host;
 	}
 	
 	public void setHost(String host) {
@@ -24,7 +27,7 @@ public class GameRoom {
 	}
 	
 	public int getMax_points() {
-		return max_points;
+		return this.max_points;
 	}
 	
 	public void setMax_points(int max_points) {
@@ -32,7 +35,7 @@ public class GameRoom {
 	}
 	
 	public ArrayList<String> getNames() {
-		return names;
+		return this.names;
 	}
 	
 	public void setNames(ArrayList<String> names) {

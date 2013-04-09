@@ -11,6 +11,14 @@ public class GameRooms {
 		names.add("Bert");
 		names.add("Ernie");
 		GameRoom gameRoom = new GameRoom("129.0.0.1", 100, names );
-		rooms.add(gameRoom);
+		GameRooms.rooms.add(gameRoom);
+	}
+
+	public static ArrayList<String> getHosts() {
+		ArrayList<String> hosts = new ArrayList<String>();
+		for(GameRoom room: GameRooms.rooms) {
+			hosts.add(room.getHost());
+		}
+		return hosts;
 	}
 }

@@ -1,15 +1,11 @@
 package servlet;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 
 import model.GameRoom;
 import model.GameRooms;
 
-import javax.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +23,6 @@ public class HoldTheServlet extends HttpServlet {
     public HoldTheServlet() {
         super();
         new GameRooms();
-        // TODO Auto-generated constructor stub
     }
 
     /**
@@ -35,7 +30,6 @@ public class HoldTheServlet extends HttpServlet {
      *      response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
         PrintWriter out = response.getWriter();
         String stringId = request.getParameter("id");
         if(stringId == null) {

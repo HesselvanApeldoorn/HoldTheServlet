@@ -1,2 +1,6 @@
 /servlet
+/rmiServer
 /model
+/rmiBase
+/allow_all.policy
+/rmiClient
