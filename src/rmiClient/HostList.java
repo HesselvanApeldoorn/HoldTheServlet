@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import model.GameRoom;
+import model.GameRooms;
 
 import rmiBase.Task;
 
@@ -20,11 +21,11 @@ public class HostList implements Task<ArrayList<GameRoom>>, Serializable {
 	public HostList() {System.out.println("hostlist constructor");}
 	
 	public ArrayList<GameRoom> execute(ArrayList<GameRoom> knownHosts) {
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("naam");
-		GameRoom room = new GameRoom("Gasdrsdfgap", 5 , list); 
-		knownHosts.add(room);
-		return knownHosts;
+//		ArrayList<String> list = new ArrayList<String>();
+//		list.add("naam");
+//		GameRoom room = new GameRoom("Gasdrsdfgap", 5 , list); 
+//		knownHosts.add(room);
+		return GameRooms.rooms;
 	}
 	public void getHost() {
 		
