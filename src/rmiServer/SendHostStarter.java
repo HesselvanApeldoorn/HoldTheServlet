@@ -9,15 +9,6 @@ import rmiBase.RetrieveHost;
 import rmiBase.RmiStarter;
 
 
-/**
- * start the server component. this exposes the an implementation of the Compute
- * interface as a service over RMI An RMI server program needs to create the
- * initial remote objects and export them to the RMI runtime, which makes them
- * available to receive incoming remote invocations.
- * 
- * @author srasul
- * 
- */
 public class SendHostStarter extends RmiStarter {
 
 	public SendHostStarter() {

@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class GameRooms {
 	
-	public static ArrayList<GameRoom> rooms = new ArrayList<GameRoom>();
+	public static ArrayList<GameRoom> rooms ;
 	
 	public GameRooms() {
+		rooms =  new ArrayList<GameRoom>();
+		System.out.println("GameRooms contructer. ");
 		ArrayList<String> names = new ArrayList<String>();
 		names.add("Bert");
 		names.add("Ernie");

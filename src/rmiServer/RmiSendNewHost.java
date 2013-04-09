@@ -4,7 +4,6 @@ package rmiServer;
 import java.rmi.RemoteException;
 
 import model.GameRoom;
-import model.GameRooms;
 
 import rmiBase.SendNew;
 import rmiBase.SendNewHostTask;

@@ -20,15 +20,13 @@ public class HostList implements Task<ArrayList<GameRoom>>, Serializable {
 	
 	public HostList() {System.out.println("hostlist constructor");}
 	
-	public ArrayList<GameRoom> execute(ArrayList<GameRoom> knownHosts) {
+	public ArrayList<GameRoom> execute() {
 //		ArrayList<String> list = new ArrayList<String>();
 //		list.add("naam");
 //		GameRoom room = new GameRoom("Gasdrsdfgap", 5 , list); 
 //		knownHosts.add(room);
 		return GameRooms.rooms;
 	}
-	public void getHost() {
-		
-	}
+
 
 }
