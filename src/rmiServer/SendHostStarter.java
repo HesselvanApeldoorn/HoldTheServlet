@@ -11,6 +11,8 @@ import rmiBase.RmiStarter;
 
 public class SendHostStarter extends RmiStarter {
 
+	private static final int port = 2525;
+	
 	public SendHostStarter() {
 		super(RetrieveHost.class);
 	}
@@ -21,8 +23,8 @@ public class SendHostStarter extends RmiStarter {
 			RetrieveHost engine = new SendHost();
 			
 			RetrieveHost engineStub = (RetrieveHost) UnicastRemoteObject.exportObject(engine, 0);
-			LocateRegistry.createRegistry(2525);  
-			Naming.rebind("rmi://"+StartRmi.ipaddress +":2525/"+RetrieveHost.SERVICE_NAME, engineStub); 
+			LocateRegistry.createRegistry(SendHostStarter.port);  
+			Naming.rebind("rmi://"+StartRmi.ipaddress +":"+SendHostStarter.port+"/"+RetrieveHost.SERVICE_NAME, engineStub); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

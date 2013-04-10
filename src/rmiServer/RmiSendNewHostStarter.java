@@ -5,13 +5,12 @@ import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 
-import model.GameRooms;
-
 import rmiBase.RmiStarter;
 import rmiBase.SendNew;
 
 public class RmiSendNewHostStarter extends RmiStarter {
 
+	private final static int port = 2727;
 	public RmiSendNewHostStarter() {
 		super(SendNew.class);
 	}
@@ -22,8 +21,8 @@ public class RmiSendNewHostStarter extends RmiStarter {
 			SendNew engine = new RmiSendNewHost();
 			
 			SendNew engineStub = (SendNew) UnicastRemoteObject.exportObject(engine, 0);
-			LocateRegistry.createRegistry(2727);  
-			Naming.rebind("rmi://"+StartRmi.ipaddress +":2727/"+SendNew.SERVICE_NAME, engineStub); 
+			LocateRegistry.createRegistry(RmiSendNewHostStarter.port);  
+			Naming.rebind("rmi://"+StartRmi.ipaddress +":" + RmiSendNewHostStarter.port + "/"+SendNew.SERVICE_NAME, engineStub); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
