@@ -23,7 +23,7 @@ public class RmiSendNewHostStarter extends RmiStarter {
 			
 			SendNew engineStub = (SendNew) UnicastRemoteObject.exportObject(engine, 0);
 			LocateRegistry.createRegistry(2727);  
-			Naming.rebind("rmi://129.125.41.177:2727/"+SendNew.SERVICE_NAME, engineStub); 
+			Naming.rebind("rmi://"+StartRmi.ipaddress +":2727/"+SendNew.SERVICE_NAME, engineStub); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
