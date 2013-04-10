@@ -8,6 +8,7 @@ public class StartRmi {
 	public static void main(String[] args) {
 		new GameRooms();
 		new SendHostStarter();
+		new RmiDeleteHostStarter();
 		new RmiSendNewHostStarter();
 	}
 
