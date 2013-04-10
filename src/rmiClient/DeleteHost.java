@@ -16,8 +16,10 @@ public class DeleteHost implements DeleteHostTask<String>, Serializable {
 	
 	public void execute(String host) {
 		int toBeDeleted = -1;
+		System.out.println("execute dehlost");
 		for(GameRoom room: GameRooms.rooms) {
-			if(room.equals(host)) {
+			if(room.getHost().equals(host)) {
+				System.out.println("deleted host: " + room.getHost());
 				toBeDeleted = GameRooms.rooms.indexOf(room);
 				break;
 			}
