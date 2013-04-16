@@ -12,7 +12,7 @@ public class DeleteHost implements DeleteHostTask<String>, Serializable {
 
 	private static final long serialVersionUID = -8379700026436615556L;
 	
-	public DeleteHost() {System.out.println("hostlist constructor");}
+	public DeleteHost() {}
 	
 	public void execute(String host) {
 		int toBeDeleted = -1;
@@ -27,8 +27,6 @@ public class DeleteHost implements DeleteHostTask<String>, Serializable {
 		
 		if(toBeDeleted!=-1) {
 			GameRooms.rooms.remove(toBeDeleted);
-		} else {
-			System.out.println("attempt to delete a host that is never added.");
 		}
 	}
 

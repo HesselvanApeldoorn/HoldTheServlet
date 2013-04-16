@@ -8,7 +8,6 @@ public class GameRooms {
 	
 	public GameRooms() {
 		rooms =  new ArrayList<GameRoom>();
-		System.out.println("GameRooms contructer. ");
 		ArrayList<String> names = new ArrayList<String>();
 		names.add("Bert");
 		names.add("Ernie");

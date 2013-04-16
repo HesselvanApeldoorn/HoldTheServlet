@@ -18,7 +18,7 @@ public class HostList implements Task<ArrayList<GameRoom>>, Serializable {
 	 * 
 	 */
 	
-	public HostList() {System.out.println("hostlist constructor");}
+	public HostList() {}
 	
 	public ArrayList<GameRoom> execute() {
 //		ArrayList<String> list = new ArrayList<String>();

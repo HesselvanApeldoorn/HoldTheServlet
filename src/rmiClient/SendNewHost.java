@@ -14,9 +14,7 @@ public class SendNewHost implements SendNewHostTask<GameRoom>, Serializable {
 	
 	
 	public void execute(GameRoom newGameRoom) {
-		System.out.println("\nGameroomsize, before add:" + GameRooms.rooms.size());
 		GameRooms.rooms.add(newGameRoom);
-		System.out.println("Gameroomsize, after add:" + GameRooms.rooms.size());
 	}
 
 }
